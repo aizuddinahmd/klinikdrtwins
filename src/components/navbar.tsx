@@ -31,7 +31,7 @@ function Navbar() {
             Tentang Kami
           </Link>
           <Link
-            href="#perkhidmatan"
+            href="/services"
             className="text-[#23235b] font-medium hover:text-[#c18e4a] transition-colors"
           >
             Perkhidmatan
