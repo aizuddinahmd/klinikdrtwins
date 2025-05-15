@@ -5,7 +5,7 @@ function FeaturesRight() {
     <section className="w-full py-16 flex flex-col md:flex-row-reverse items-center justify-between gap-12 bg-[#9eaf7c]">
       {/* Right: Main image with overlay */}
       <div className="relative flex-1 flex justify-center items-center">
-        <div className="w-[480px] h-[480px] overflow-hidden">
+        <div className="w-full md:w-[480px] md:h-[480px] overflow-hidden">
           <Image
             src="/features/features-3.png"
             alt="Main"

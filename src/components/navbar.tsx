@@ -31,7 +31,7 @@ function Navbar() {
             Tentang Kami
           </Link>
           <Link
-            href="/services"
+            href="#perkhidmatan"
             className="text-[#23235b] font-medium hover:text-[#c18e4a] transition-colors"
           >
             Perkhidmatan
@@ -40,7 +40,7 @@ function Navbar() {
         {/* Contact Button */}
         <Link
           href="#contact"
-          className="bg-[#c18e4a] text-white rounded-xl px-7 py-2 font-medium hover:bg-[#a97a3a] transition-colors text-base shadow-none"
+          className="hidden md:block bg-[#c18e4a] text-white rounded-xl px-7 py-2 font-medium hover:bg-[#a97a3a] transition-colors text-base shadow-none"
         >
           Hubungi Kami
         </Link>

@@ -4,13 +4,13 @@ function Features() {
   return (
     <section className="w-full py-16 flex flex-col md:flex-row items-center justify-between gap-12 bg-[#fef9f6]">
       {/* Left: Main image with overlay */}
-      <div className="relative flex-1 flex justify-center items-center">
-        <div className="w-[480px] h-[480px]  overflow-hidden ">
+      <div className="relative flex-1 flex justify-center items-center w-full">
+        <div className="w-full md:w-[480px] md:h-[480px] overflow-hidden mx-auto">
           <Image
             src="/features/features-1.png"
             alt="Main"
-            width={320}
-            height={320}
+            width={480}
+            height={480}
             className="object-cover w-full h-full"
           />
         </div>
