@@ -3,7 +3,7 @@ import Navbar from "../components/navbar";
 import DescriptionSection from "../components/description-section";
 import Services from "@/components/Services";
 import FeaturesLeft from "@/components/FeaturesLeft";
-import Services2 from "@/components/Services2";
+// import Services2 from "@/components/Services2";
 import FeaturesRight from "@/components/FeaturesRight";
 // import Hero2 from "@/components/Hero2";
 import Hero3 from "@/components/Hero3";
