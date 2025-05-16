@@ -7,14 +7,16 @@ function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <Image
-            src={`/drtwins-logo.svg`}
-            alt="Klinik Dr Twins Logo"
-            width={100}
-            height={100}
-            className="object-contain"
-            priority
-          />
+          <Link href="/">
+            <Image
+              src={`/drtwins-logo.png`}
+              alt="Klinik Dr Twins Logo"
+              width={100}
+              height={100}
+              className="object-contain"
+              priority
+            />
+          </Link>
         </div>
         {/* Nav Links */}
         <div className="flex-1 flex justify-center gap-10">
@@ -31,7 +33,7 @@ function Navbar() {
             Tentang Kami
           </Link>
           <Link
-            href="#perkhidmatan"
+            href="services"
             className="text-[#23235b] font-medium hover:text-[#c18e4a] transition-colors"
           >
             Perkhidmatan

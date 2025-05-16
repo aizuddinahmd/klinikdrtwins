@@ -18,7 +18,7 @@ export default function Testimonial({
   const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
 
   return (
-    <div className="bg-white rounded-2xl shadow-md p-8 max-w-lg mx-auto flex flex-col items-center gap-4">
+    <div className="bg-[#9eaf7c] rounded-2xl border border-[#e5e0f6] p-8 max-w-lg mx-auto flex flex-col items-center gap-4">
       <div className="flex items-center gap-1">
         {[...Array(fullStars)].map((_, i) => (
           <Star key={i} className="text-yellow-400 fill-yellow-400 w-5 h-5" />
@@ -33,10 +33,10 @@ export default function Testimonial({
           {safeRating.toFixed(1)}
         </span>
       </div>
-      <p className="text-lg text-center text-[#44454a] italic">
+      <p className="text-lg text-center text-[#ebebef] italic">
         &quot;{comment}&quot;
       </p>
-      <span className="text-base font-medium text-[#9eaf7c]">{name}</span>
+      <span className="text-base font-medium text-[#ebebef]">{name}</span>
     </div>
   );
 }

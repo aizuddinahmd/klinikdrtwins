@@ -7,7 +7,7 @@ export default function AboutUs() {
         {/* Top Left: Large Image */}
         <div className="rounded-2xl overflow-hidden border border-gray-300">
           <Image
-            src="/aboutus/top-left.jpg"
+            src="/drtwins-team.jpg"
             alt="Team"
             width={600}
             height={400}
@@ -30,7 +30,7 @@ export default function AboutUs() {
         {/* Bottom Left: Small Image */}
         <div className="rounded-2xl overflow-hidden border border-gray-300">
           <Image
-            src="/aboutus/bottom-left.jpg"
+            src="/clinic-6.JPG"
             alt="Clinic"
             width={400}
             height={300}
@@ -40,20 +40,20 @@ export default function AboutUs() {
         {/* Bottom Center: Logo/Icon */}
         <div className="rounded-2xl border border-gray-300 bg-white flex items-center justify-center p-8 min-h-[180px]">
           <Image
-            src="/aboutus/logo.png"
+            src="/drtwins-logo-single.png"
             alt="Logo"
             width={120}
             height={120}
-            className="object-contain"
+            className="object-cover"
           />
         </div>
         {/* Bottom Right: Small Image */}
         <div className="rounded-2xl overflow-hidden border border-gray-300">
           <Image
-            src="/aboutus/bottom-right.jpg"
-            alt="Dentist"
-            width={400}
-            height={300}
+            src="/clinic-2.JPG"
+            alt="clinic"
+            width={200}
+            height={200}
             className="object-cover w-full h-full"
           />
         </div>
