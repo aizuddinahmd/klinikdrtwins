@@ -14,7 +14,7 @@ import ListofTestimonials from "../components/ListofTestimonials";
 // import Hero from "@/components/hero";
 import Hero2 from "@/components/Hero2";
 import Footer from "@/components/Footer";
-
+import AboutUs2 from "@/components/AboutUs2";
 export default function Home() {
   return (
     <>
@@ -30,6 +30,7 @@ export default function Home() {
         <AboutUs />
         <FeaturesRight />
         <FeaturesLeft />
+        <AboutUs2 />
         <ListofTestimonials />
         <Footer />
       </main>
