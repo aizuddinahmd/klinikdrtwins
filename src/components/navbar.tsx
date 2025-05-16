@@ -21,18 +21,6 @@ function Navbar() {
         {/* Nav Links */}
         <div className="flex-1 flex justify-center gap-10">
           <Link
-            href="/"
-            className="text-[#4f46e5] font-medium hover:text-[#4f46e5] transition-colors"
-          >
-            Laman Utama
-          </Link>
-          <Link
-            href="#tentang-kami"
-            className="text-[#23235b] font-medium hover:text-[#c18e4a] transition-colors"
-          >
-            Tentang Kami
-          </Link>
-          <Link
             href="services"
             className="text-[#23235b] font-medium hover:text-[#c18e4a] transition-colors"
           >

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero2() {
   return (
-    <section className="relative w-full min-h-[700px] flex flex-row md:flex-row justify-center bg-[#fef9f6] overflow-hidden rounded-3xl mb-16">
+    <section className="relative w-full md:h-[740px] flex flex-row md:flex-row justify-center bg-[#fef9f6] overflow-hidden rounded-3xl mb-16">
       {/* Curve on the right */}
       <div className="hidden md:block z-10">
         <Image
