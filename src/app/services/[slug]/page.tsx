@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { cookies } from "next/headers";
+// import { cookies } from "next/headers";
 import AdminImageUpload from "@/components/AdminImageUpload";
 import Navbar from "@/components/navbar";
 import ServiceImageGallery from "@/components/ServiceImageGallery";
