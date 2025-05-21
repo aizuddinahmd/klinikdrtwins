@@ -25,8 +25,8 @@ interface ServiceImageGalleryProps {
 export default function ServiceImageGallery({
   serviceTitle,
   defaultIcon,
-  isAdmin,
-}: ServiceImageGalleryProps) {
+}: // isAdmin,
+ServiceImageGalleryProps) {
   const [images, setImages] = useState<ServiceImage[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
