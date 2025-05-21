@@ -94,11 +94,14 @@ const services = [
   // Add more features as needed
 ];
 
-export default async function ServicePage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+interface PageProps {
+  params: {
+    slug: string;
+  };
+  searchParams: { [key: string]: string | string[] | undefined };
+}
+
+export default async function ServicePage({ params }: PageProps) {
   const { slug } = params;
   const service = services.find(
     (s) =>
