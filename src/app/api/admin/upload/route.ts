@@ -155,3 +155,43 @@ export async function POST(request: Request) {
     );
   }
 }
+
+export async function DELETE(request: Request) {
+  try {
+    const url = new URL(request.url);
+    const serviceName = url.searchParams.get("serviceName");
+    const imageName = url.searchParams.get("imageName");
+
+    if (!serviceName || !imageName) {
+      return NextResponse.json(
+        { error: "Service name and image name are required" },
+        { status: 400 }
+      );
+    }
+
+    // Create a safe folder name from the service name
+    const safeServiceName = serviceName
+      .toLowerCase()
+      .replace(/[^a-z0-9]/g, "-");
+
+    const supabase = await createClient();
+    const { error } = await supabase.storage
+      .from("services")
+      .remove([`${safeServiceName}/${imageName}`]);
+
+    if (error) {
+      throw error;
+    }
+
+    return NextResponse.json({
+      success: true,
+      message: "Image deleted successfully",
+    });
+  } catch (error) {
+    console.error("Error deleting image:", error);
+    return NextResponse.json(
+      { error: "Error deleting image" },
+      { status: 500 }
+    );
+  }
+}

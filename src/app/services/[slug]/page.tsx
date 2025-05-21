@@ -3,6 +3,7 @@ import { cookies } from "next/headers";
 import AdminImageUpload from "@/components/AdminImageUpload";
 import Navbar from "@/components/navbar";
 import ServiceImageGallery from "@/components/ServiceImageGallery";
+import { createClient } from "@/utils/supabase/server";
 
 // This would typically come from a database or CMS
 const services = [
@@ -112,10 +113,13 @@ export default async function ServicePage(props: Props) {
     notFound();
   }
 
-  // Check if user is admin
-  const cookieStore = await cookies();
-  const isAdmin =
-    cookieStore.get("admin_token")?.value === process.env.ADMIN_TOKEN;
+  // Check if user is authenticated
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  console.log("user", user);
 
   return (
     <>
@@ -136,10 +140,10 @@ export default async function ServicePage(props: Props) {
               <ServiceImageGallery
                 serviceTitle={service.title}
                 defaultIcon={service.icon}
-                isAdmin={isAdmin}
+                isAdmin={!!user}
               />
 
-              {isAdmin && (
+              {user && (
                 <div className="mt-4">
                   <AdminImageUpload serviceName={service.title} />
                 </div>
