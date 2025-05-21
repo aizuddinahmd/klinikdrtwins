@@ -95,12 +95,11 @@ const services = [
 ];
 
 type Props = {
-  params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: Promise<{ slug: string }>;
 };
 
 export default async function ServicePage(props: Props) {
-  const { slug } = props.params;
+  const { slug } = await props.params;
   const service = services.find(
     (s) =>
       s.title
