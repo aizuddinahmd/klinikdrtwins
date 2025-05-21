@@ -1,5 +1,14 @@
 import { createClient } from "@/utils/supabase/server";
 import { NextResponse } from "next/server";
+import { SupabaseClient } from "@supabase/supabase-js";
+
+// Function to convert public URL to signed URL
+async function getSignedUrl(supabase: SupabaseClient, path: string) {
+  const { data } = await supabase.storage
+    .from("services")
+    .createSignedUrl(path, 31536000); // 1 year expiry
+  return data?.signedUrl;
+}
 
 // GET function to fetch all images for a service
 export async function GET(request: Request) {
@@ -15,7 +24,6 @@ export async function GET(request: Request) {
       );
     }
 
-    console.log("serviceName:", serviceName);
     // Create a safe folder name from the service name
     const safeServiceName = serviceName
       .toLowerCase()
@@ -31,26 +39,23 @@ export async function GET(request: Request) {
       throw error;
     }
 
-    console.log("images:", images);
+    // Get signed URLs for all images
+    const imageUrls = await Promise.all(
+      images.map(async (image) => {
+        const signedUrl = await getSignedUrl(
+          supabase,
+          `${safeServiceName}/${image.name}`
+        );
 
-    // Get public URLs for all images
-    const imageUrls = images.map((image) => {
-      const {
-        data: { publicUrl },
-      } = supabase.storage
-        .from("services")
-        .getPublicUrl(`${safeServiceName}/${image.name}`);
-
-      return {
-        name: image.name,
-        url: publicUrl,
-        created_at: image.created_at,
-        last_accessed_at: image.last_accessed_at,
-        metadata: image.metadata,
-      };
-    });
-
-    // console.log("imageUrls:", imageUrls);
+        return {
+          name: image.name,
+          url: signedUrl,
+          created_at: image.created_at,
+          last_accessed_at: image.last_accessed_at,
+          metadata: image.metadata,
+        };
+      })
+    );
 
     return NextResponse.json({
       success: true,

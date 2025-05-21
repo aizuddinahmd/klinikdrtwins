@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { Loader2 } from "lucide-react";
 
 interface ServiceImage {
   name: string;
@@ -32,22 +33,13 @@ export default function ServiceImageGallery({
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const url = new URL("/api/admin/upload", window.location.origin);
-        url.searchParams.append("serviceName", serviceTitle);
-
-        const response = await fetch(url.toString(), {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-
-        if (!response.ok) {
-          throw new Error("Failed to fetch images");
-        }
-
+        const response = await fetch(
+          `/api/admin/upload?serviceName=${encodeURIComponent(serviceTitle)}`
+        );
         const data = await response.json();
-        setImages(data.images || []);
+        if (data.success) {
+          setImages(data.images);
+        }
       } catch (error) {
         console.error("Error fetching images:", error);
       } finally {
@@ -60,37 +52,42 @@ export default function ServiceImageGallery({
 
   if (isLoading) {
     return (
-      <div className="relative w-[300px] h-[300px] flex items-center justify-center">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#c18e4a]"></div>
+      <div className="flex justify-center items-center min-h-[400px]">
+        <Loader2 className="h-8 w-8 animate-spin text-gray-500" />
+      </div>
+    );
+  }
+
+  if (images.length === 0) {
+    return (
+      <div className="relative w-[600px] h-[400px] rounded-lg overflow-hidden">
+        <Image
+          src={defaultIcon}
+          alt={serviceTitle}
+          fill
+          className="object-contain"
+          priority
+        />
       </div>
     );
   }
 
   return (
-    <div className="flex-shrink-0">
-      {images && images.length > 0 ? (
-        <div className="grid grid-cols-1 gap-4">
-          {images.map((image) => (
-            <div key={image.name} className="relative w-[300px] h-[300px]">
-              <Image
-                src={image.url}
-                alt={`${serviceTitle} - ${image.name}`}
-                fill
-                className="object-contain rounded-lg"
-              />
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div className="relative w-[300px] h-[300px]">
+    <div className="grid grid-cols-1 gap-4">
+      {images.map((image) => (
+        <div
+          key={image.name}
+          className="relative w-[600px] h-[600px] rounded-lg overflow-hidden"
+        >
           <Image
-            src={defaultIcon}
-            alt={serviceTitle}
+            src={image.url}
+            alt={image.name}
             fill
             className="object-contain"
+            priority
           />
         </div>
-      )}
+      ))}
     </div>
   );
 }
