@@ -2,13 +2,13 @@ import Image from "next/image";
 
 function FeaturesRight() {
   return (
-    <section className="w-full py-16 flex flex-col md:flex-row-reverse items-center justify-between gap-12 bg-[#9eaf7c]">
+    <section className="w-full py-16 flex flex-col md:flex-row-reverse items-center rounded-4xl justify-between gap-12 bg-[#9eaf7c]">
       {/* Right: Main image with overlay */}
       <div className="relative flex-1 flex justify-center items-center">
         <div className="w-full md:w-[480px] md:h-[480px] overflow-hidden">
           <Image
-            src="/features/features-3.png"
-            alt="Main"
+            src="/features/features-2.png"
+            alt="features-2"
             width={480}
             height={480}
             className="object-cover w-full h-full"

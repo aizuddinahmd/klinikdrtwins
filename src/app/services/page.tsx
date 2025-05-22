@@ -5,7 +5,6 @@ export default function Services() {
     <>
       <Navbar />
       <main className="flex flex-col items-center justify-center min-h-screen bg-[#fef9f6] px-36 py-12">
-        <h1>Services</h1>
         <ListofServices />
       </main>
     </>

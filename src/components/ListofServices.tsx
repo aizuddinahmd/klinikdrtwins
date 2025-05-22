@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 const services = [
   {
-    icon: "/ibu-mengandung.svg",
+    icon: "/services/ibu-mengandung.png",
     title: "Rawatan Ibu Mengandung",
     desc: "Kami menyediakan perkhidmatan seperti <i>ultrasound scan baby</i>, buka buku pink, ujian kehamilan, minum air gula dan lain-lain",
     button: "Ketahui lebih lanjut",
@@ -112,12 +112,12 @@ export default function ListofServices() {
           className="border-[#bcbcbc] bg-white p-8 hover:shadow-lg transition-all duration-200 hover:scale-[1.02]"
         >
           <CardContent className="flex flex-col md:flex-row items-center gap-6">
-            <div className="flex-shrink-0 flex items-center justify-center w-24 h-24 mb-4 md:mb-0 md:mr-6">
+            <div className="flex-shrink-0 flex items-center justify-center w-32 h-32 mb-4 md:mb-0 md:mr-6">
               <Image
                 src={service.icon}
                 alt={service.title}
-                width={80}
-                height={80}
+                width={120}
+                height={120}
                 className="object-contain"
               />
             </div>

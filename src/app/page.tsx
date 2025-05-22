@@ -15,15 +15,20 @@ import ListofTestimonials from "../components/ListofTestimonials";
 import Hero2 from "@/components/Hero2";
 import Footer from "@/components/Footer";
 import AboutUs2 from "@/components/AboutUs2";
+import Logo from "@/components/Logo";
+
 export default function Home() {
   return (
     <>
       <Navbar />
       <main className="flex flex-col items-center justify-center min-h-screen bg-[#fef9f6] px-4 py-12">
         {/* <Hero /> */}
-        <Hero2 />
-        {/* <Hero3 /> */}
-        <DescriptionSection />
+        <div className="relative">
+          <Hero2 />
+          {/* <Hero3 /> */}
+          <DescriptionSection />
+        </div>
+        <Logo />
         {/* <Services /> */}
         {/* <Services2 /> */}
         <Services3 />
