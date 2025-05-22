@@ -58,9 +58,7 @@ export default function Logo() {
         >
           {logoIcons.map((item) => (
             <li key={item.id}>
-              <a href={item.url}>
-                <Image src={item.src} alt={item.alt} width={120} height={60} />
-              </a>
+              <Image src={item.src} alt={item.alt} width={120} height={60} />
             </li>
           ))}
         </ul>
@@ -70,9 +68,7 @@ export default function Logo() {
         >
           {logoIcons.map((item) => (
             <li key={item.id}>
-              <a href={item.url}>
-                <img src={item.src} alt={item.alt} width={120} height={60} />
-              </a>
+              <Image src={item.src} alt={item.alt} width={120} height={60} />
             </li>
           ))}
         </ul>
