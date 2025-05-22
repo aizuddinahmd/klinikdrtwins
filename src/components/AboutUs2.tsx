@@ -54,7 +54,7 @@ function DoctorCard({ doctor }: { doctor: Doctor }) {
         <div className="text-lg font-semibold text-[#23235b]">
           {doctor.name}
         </div>
-        <div className="text-sm text-[#4f7fff] font-medium">
+        <div className="text-sm text-[#23235b] font-medium">
           {doctor.specialty}
         </div>
         <div className="text-xs text-[#44454a] mb-2">{doctor.description}</div>
