@@ -16,13 +16,14 @@ export default function AboutUs() {
         </div>
         {/* Top Right: About Card */}
         <div className="rounded-2xl bg-[#386963] text-white p-8 flex flex-col justify-center min-h-[300px]">
-          <h3 className="text-lg font-semibold mb-4">ABOUT THE PROJECT</h3>
+          <h3 className="text-lg font-semibold mb-4">
+            Where caring is our calling
+          </h3>
           <p className="text-base leading-relaxed">
-            Development of a convenient and intuitive site for dental clinic.
-            The project included the development of UX/UI-design of the site,
-            logo and corporate identity. My goal is to convey the
-            professionalism and high level of the clinic service through visual
-            identity and a convenient user interface.
+            Klinik Dr Twins merupakan klinik perubatan yang sesuai untuk seisi
+            keluarga dengan suasana minimalis yang menyenangkan saat anda
+            memasuki klinik kami. Kami menawarkan rawatan yang komprehensif
+            serta dilengkapi dengan peralatan terbaru dan canggih.
           </p>
         </div>
       </div>

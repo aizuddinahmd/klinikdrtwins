@@ -7,7 +7,6 @@ interface Doctor {
   specialty: string;
   description: string;
   image: string;
-  years: number;
 }
 
 const doctors: Doctor[] = [
@@ -16,21 +15,18 @@ const doctors: Doctor[] = [
     specialty: "Resident Doctor",
     description: "MBbCh (Tanta,Egypt)",
     image: "/doctor/amalia.png", // Replace with your image paths
-    years: 8,
   },
   {
     name: "Dr. Amalia",
     specialty: "Resident Doctor",
     description: "MBbCh (Tanta,Egypt)",
     image: "/doctor/amalina.png",
-    years: 5,
   },
   {
-    name: "Dr. Farzana",
+    name: "Dr. Faziera",
     specialty: "Resident Doctor",
     description: "MBBS (JUST, Jordan)",
-    image: "/doctor/farzana.png",
-    years: 10,
+    image: "/doctor/faziera.png",
   },
 ];
 

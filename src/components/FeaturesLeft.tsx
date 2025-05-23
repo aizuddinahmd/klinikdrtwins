@@ -24,13 +24,13 @@ function Features() {
       {/* Right: Text and small images */}
       <div className="flex-1 flex flex-col gap-6 items-start">
         <h2 className="text-4xl md:text-5xl font-bold text-[#18181a] leading-tight">
-          Your Beauty And
+          Klinik Dr Twins
           <br />
-          Success Starts Here
+          Klinik Pilihan Keluarga
         </h2>
         <p className="text-lg text-[#44454a] max-w-md">
-          We offer a wide range of services to help you look and feel your best.
-          Our experienced stylists are dedicated
+          Dari kehamilan hinggalah bayi anda membesar — kami bersama anda setiap
+          langkah.
         </p>
         <button className="bg-[#c18e4a] text-white rounded-xl px-8 py-3 text-base font-medium flex items-center gap-2 hover:bg-[#a97a3a] transition-colors">
           Learn More <span className="ml-2">&rarr;</span>

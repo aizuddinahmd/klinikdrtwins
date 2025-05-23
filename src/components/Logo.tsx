@@ -3,32 +3,112 @@ import Image from "next/image";
 const logoIcons = [
   {
     id: 1,
-    src: "/logo/logo-1.png",
+    src: "/panel/1.png",
     alt: "Logo",
   },
   {
     id: 2,
-    src: "/logo/logo-2.png",
+    src: "/panel/2.png",
     alt: "Logo",
   },
   {
     id: 3,
-    src: "/logo/logo-3.png",
+    src: "/panel/3.png",
     alt: "Logo",
   },
   {
     id: 4,
-    src: "/logo/logo-4.png",
+    src: "/panel/4.png",
     alt: "Logo",
   },
   {
     id: 5,
-    src: "/logo/logo-5.png",
+    src: "/panel/5.png",
     alt: "Logo",
   },
   {
     id: 6,
-    src: "/logo/logo-6.png",
+    src: "/panel/6.png",
+    alt: "Logo",
+  },
+  {
+    id: 7,
+    src: "/panel/7.png",
+    alt: "Logo",
+  },
+  {
+    id: 8,
+    src: "/panel/8.png",
+    alt: "Logo",
+  },
+  {
+    id: 9,
+    src: "/panel/9.png",
+    alt: "Logo",
+  },
+  {
+    id: 10,
+    src: "/panel/10.png",
+    alt: "Logo",
+  },
+  {
+    id: 11,
+    src: "/panel/11.png",
+    alt: "Logo",
+  },
+  {
+    id: 12,
+    src: "/panel/12.png",
+    alt: "Logo",
+  },
+  {
+    id: 13,
+    src: "/panel/13.png",
+    alt: "Logo",
+  },
+  {
+    id: 14,
+    src: "/panel/14.png",
+    alt: "Logo",
+  },
+  {
+    id: 15,
+    src: "/panel/15.png",
+    alt: "Logo",
+  },
+  {
+    id: 16,
+    src: "/panel/16.png",
+    alt: "Logo",
+  },
+  {
+    id: 17,
+    src: "/panel/17.png",
+    alt: "Logo",
+  },
+  {
+    id: 18,
+    src: "/panel/18.png",
+    alt: "Logo",
+  },
+  {
+    id: 19,
+    src: "/panel/19.png",
+    alt: "Logo",
+  },
+  {
+    id: 20,
+    src: "/panel/20.png",
+    alt: "Logo",
+  },
+  {
+    id: 21,
+    src: "/panel/21.png",
+    alt: "Logo",
+  },
+  {
+    id: 22,
+    src: "/panel/22.png",
     alt: "Logo",
   },
 ];
